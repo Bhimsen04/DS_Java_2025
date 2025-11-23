@@ -18,8 +18,7 @@ public class Best_time_to_buy_and_sell_stock {
         for (int i = 1; i < prices.length; i++) {
             if (prices[i] < lowestPrice) {
                 lowestPrice = prices[i];
-            }
-            else if (prices[i] - lowestPrice > maxProfit) {
+            } else if (prices[i] - lowestPrice > maxProfit) {
                 maxProfit = prices[i] - lowestPrice;
             }
         }

@@ -26,8 +26,13 @@ public final class Employee {
         this.details = Collections.unmodifiableMap(new HashMap<>(details));
     }
 
-    public int getId() { return id; }
-    public String getName() { return name; }
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     // Return deep copy
     public Address getAddress() {

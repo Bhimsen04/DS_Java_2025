@@ -9,7 +9,7 @@ public class AddNumbers {
     }
 
     private static int sumRec(int[] arr, int l) {
-        if(l >= 0){
+        if (l >= 0) {
             return arr[l] + sumRec(arr, l - 1);
         }
         return 0;

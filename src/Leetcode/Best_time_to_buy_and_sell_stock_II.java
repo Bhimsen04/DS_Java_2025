@@ -12,8 +12,8 @@ public class Best_time_to_buy_and_sell_stock_II {
 
         int maxProfit = 0;
         for (int i = 1; i < prices.length; i++) {
-            if(prices[i] > prices[i-1]){
-                maxProfit += prices[i] - prices[i-1];
+            if (prices[i] > prices[i - 1]) {
+                maxProfit += prices[i] - prices[i - 1];
             }
         }
 

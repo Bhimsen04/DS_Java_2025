@@ -11,19 +11,19 @@ public class Testing {
 //        digitOfGivenNumberIsSet_byRightShift(num, 5);
 //        digitOfGivenNumberIsSet_byLeftShift(num, 5);
         countSetBits(num);
-        xSetBitsFollowedByYZeroes(3,4); // 1110000
+        xSetBitsFollowedByYZeroes(3, 4); // 1110000
 
     }
 
     private static void xSetBitsFollowedByYZeroes(int x, int y) {
-        System.out.println(((1<<x)-1) << y);
+        System.out.println(((1 << x) - 1) << y);
     }
 
     private static void countSetBits(int num) {
 
         int count = 0;
-        while(num > 0){
-            if((num & 1)!=0){
+        while (num > 0) {
+            if ((num & 1) != 0) {
                 count++;
             }
             num = num >> 1;
