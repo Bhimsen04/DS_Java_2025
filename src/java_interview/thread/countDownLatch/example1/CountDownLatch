@@ -1,0 +1,4 @@
+CountDownLatch Example
+Scenario: A main thread needs to wait for multiple worker threads to complete their individual tasks before the entire process can finish.
+Example: A manager (main thread) waits for two development teams (worker threads) to finish their modules before assigning the work to a
+            QA team.

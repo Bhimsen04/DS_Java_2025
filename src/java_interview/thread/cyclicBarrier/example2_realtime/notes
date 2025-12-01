@@ -1,0 +1,5 @@
+Performance Note:
+
+Using a busy-wait loop (i.e., continuously checking if the elapsed time is enough) is not efficient and
+    is generally avoided in production-level code. It's used here just to demonstrate the concept without using Thread.sleep().
+In real-world applications, you'd likely use timers or scheduled tasks to handle this more efficiently.

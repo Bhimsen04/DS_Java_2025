@@ -1,0 +1,4 @@
+CyclicBarrier Example :
+Scenario: Multiple threads are working on a task and must all complete their work before moving on to the next phase together.
+Example: Friends going on a picnic decide to meet at a common point before starting the journey together. Each friend waits at the
+        designated spot until everyone has arrived.

@@ -1,0 +1,4 @@
+All cars wait for each other :	CyclicBarrier
+Only main thread waits for all cars :	CountDownLatch
+Group restart multiple times :	CyclicBarrier (reusable), not latch
+One-time event :	CountDownLatch
