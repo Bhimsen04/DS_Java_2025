@@ -1,0 +1,5 @@
+Real-Time Example: Bank Account Money Transfer
+Multiple threads try to withdraw money at the same time from the same account.
+
+ReentrantLock ensures that only one thread modifies the balance at a time, preventing race conditions.
+This is a real-world scenario used in banking, finance, and e-commerce systems.
