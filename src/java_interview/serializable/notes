@@ -1,0 +1,24 @@
+serialVersionUID is used in real systems where Java objects are serialized for
+caching, session replication, messaging, or file storage, and later deserialized after application redeployment or restart.
+It is not used for REST or downstream APIs.
+
+Add it ONLY if ALL are true:
+    Class implements Serializable
+    Object may be stored / cached / transferred
+    Object may be read later (after restart or redeploy)
+    ✔ Session objects
+    ✔ Cache objects (Redis, Ehcache)
+    ✔ DTOs used in Java serialization (legacy)
+    ✔ Objects written to files
+    ✔ Messaging objects (JMS / old Kafka usage)
+
+    👉 Rule: If you see Serializable, add serialVersionUID.
+
+❌ When you do NOT need it
+
+❌ REST request/response DTOs
+❌ JSON-only objects (Jackson)
+❌ Database entities (JPA only)
+❌ API models
+❌ Microservice communication
+
