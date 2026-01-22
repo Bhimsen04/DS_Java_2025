@@ -1,4 +1,4 @@
-package Leetcode;
+package Leetcode.Array;
 
 // https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/description/
 public class Best_time_to_buy_and_sell_stock_III {
