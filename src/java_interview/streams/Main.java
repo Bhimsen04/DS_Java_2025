@@ -1,9 +1,7 @@
 package java_interview.streams;
 
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -26,6 +24,35 @@ public class Main {
 /*        I/P : Map<dep, Map < Experience, List<Salary>>
           O/P : Map<dep, Map < Experience, Double>>   */
         findMaxSalExpWiseThenDepWise();
+
+        /*
+        Sort by value → descending
+        If values are same → sort by key → ascending
+        Return a Map (maintaining sorted order)
+         */
+        mapSortDescThenAsc();
+    }
+
+    private static void mapSortDescThenAsc() {
+
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(3, 20);
+        map.put(1, 10);
+        map.put(2, 20);
+        map.put(4, 10);
+
+        map = map.entrySet()
+                .stream()
+                .sorted(Map.Entry.<Integer, Integer>comparingByValue(Comparator.reverseOrder())
+                        .thenComparing(Map.Entry.comparingByKey()))
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (e1,e2) -> e1,
+                        LinkedHashMap::new
+                ));
+
+        System.out.println(map);
     }
 
     private static void findMaxSalExpWiseThenDepWise() {
